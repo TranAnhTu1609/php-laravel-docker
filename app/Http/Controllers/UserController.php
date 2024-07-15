@@ -9,6 +9,8 @@ class UserController extends Controller
 {
     public function index()
     {
-       return 1;
+        $users = User::get();
+
+        return view('users.users', compact('users'));
     }
 }
