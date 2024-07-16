@@ -29,7 +29,7 @@
                 </div>
             @endif
 
-            <form action="{{ route('users.import') }}" method="POST" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <input type="file" name="file" class="form-control">
@@ -42,7 +42,7 @@
                 <tr>
                     <th colspan="3">
                         List Of Users
-                        <a class="btn btn-warning float-end" href="{{ route('users.export') }}"><i class="fa fa-download"></i> Export User Data</a>
+                        <a class="btn btn-warning float-end" href=""><i class="fa fa-download"></i> Export User Data</a>
                     </th>
                 </tr>
                 <tr>
