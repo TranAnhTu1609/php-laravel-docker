@@ -22,3 +22,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('users', [\App\Http\Controllers\UserController::class, 'index']);
+
+Route::controller(\App\Http\Controllers\FacebookController::class)->group(function (){
+   Route::get('facebook', 'redirectToFacebook')->name('facebook');
+   Route::get('facebook/callback', 'handleFacebookCallback');
+});
